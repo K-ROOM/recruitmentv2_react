@@ -3,10 +3,10 @@ const nextConfig = {
     images: {
         domains: ['lh3.googleusercontent.com'],
     },
-    experimental: {
-        serverActions: true,
-    },
-    reactStrictMode: true,
+    // experimental: {
+    //     serverActions: true,
+    // },
+    // reactStrictMode: true,
     env: {
         PORT: 3001
     }
