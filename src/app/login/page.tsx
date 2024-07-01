@@ -1,17 +1,16 @@
 import { redirect } from "next/navigation";
 import { getServerSession } from "next-auth";
+import { authOptions } from "../api/auth/[...nextauth]/auth";
+import Login from "@/app/components/login";
 
-import Home from "./components/home";
-import { authOptions } from "./api/auth/[...nextauth]/auth";
-
-export default async function HomePage() {
+export default async function LoginPage() {
   const session = await getServerSession(authOptions)
   if (session) {
     redirect("/main");
   } else {
     return (
       <>
-        <Home />
+        <Login />
       </>
     )
   }

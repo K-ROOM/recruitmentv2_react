@@ -1,33 +1,619 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
+/* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
-}
+} */
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+  /* :root {
+    --foreground-rgb: 0, 0, 0;
+    --background-start-rgb: 255, 255, 255;
+    --background-end-rgb: 255, 255, 255;
+  } */
 }
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
+  /* background: linear-gradient(
       to bottom,
       transparent,
       rgb(var(--background-end-rgb))
     )
-    rgb(var(--background-start-rgb));
+    rgb(var(--background-start-rgb)); */
+  background-color: #f5f5f4;
+}
+.font-prompt {
+  font-family: "Prompt";
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+  .input-formcontrol {
+    @apply bg-white 
+    	border border-gray-300 
+    	text-gray-900 
+    	text-xs 
+    	rounded-lg 
+    	block 
+    	w-full 
+    	p-2.5 
+      focus:ring-blue-400
+    	dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white;
+  }
+  .input-formcontrol:disabled {
+    @apply bg-gray-100 
+      border border-gray-200 
+      text-gray-700 
+      text-xs 
+      rounded-lg 
+      block 
+      w-full 
+      p-2.5 
+      dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white;
+  }
+  .dropdown:focus {
+    background-color: #3f82ff;
+  }
+  .dropdown option {
+    background-color: white;
+  }
+  .btn {
+    @apply font-medium 
+			cursor-pointer
+			rounded-md
+			text-sm
+			text-center
+			py-2
+			px-4
+      hover:shadow transition duration-150;
+  }
+  .btn:disabled {
+    @apply font-medium 
+      cursor-no-drop
+			rounded-lg
+			text-sm
+			text-center
+			py-2
+			px-4;
+  }
+  .btn-blue {
+    @apply text-white  
+			bg-blue-600
+			border 
+			border-blue-600 
+      hover:bg-blue-700
+      hover:border-blue-700 
+      hover:text-white
+      dark:bg-blue-600 dark:hover:bg-blue-700;
+  }
+  .btn-blue-previous {
+    @apply text-blue-700  
+			bg-blue-200
+			border 
+			border-blue-200 
+      hover:bg-blue-300
+      hover:border-blue-300 
+      dark:bg-blue-300 dark:hover:bg-blue-300;
+  }
+  .btn-outlineBlue {
+    @apply text-blue-600  
+      bg-white
+      border 
+      border-blue-600 
+      hover:bg-blue-600 
+      hover:border-blue-600 
+      hover:text-white
+      focus:ring-4 
+      focus:ring-blue-300
+      focus:outline-none 
+      dark:bg-blue-600 dark:hover:text-blue-300 dark:hover:border-blue-500  dark:focus:ring-blue-800;
+  }
+  .btn-orange {
+    @apply text-white  
+			bg-orange-500
+			border 
+			border-orange-500 
+      hover:bg-orange-600
+      hover:border-orange-600 
+      hover:text-white
+			dark:bg-orange-600 dark:hover:text-orange-300 dark:hover:border-orange-500;
+  }
+  .btn-red {
+    @apply text-white  
+			bg-red-500
+			border 
+			border-red-500 
+      hover:bg-red-600
+      hover:border-red-600 
+      hover:text-white
+			dark:bg-red-600 dark:hover:text-red-300 dark:hover:border-red-500;
+  }
+  .btn-navy {
+    @apply text-white  
+			bg-blue-800
+			border 
+			border-blue-800 
+      hover:bg-blue-700
+      hover:border-blue-700 
+      hover:text-blue-50
+			dark:bg-blue-600 dark:hover:text-blue-300 dark:hover:border-blue-500;
+  }
+	.btn-outlineNavy {
+    @apply text-blue-800  
+      bg-white
+      border 
+      border-blue-800 
+      hover:bg-blue-800 
+      hover:border-blue-800 
+      hover:text-white
+      focus:ring-4 
+      focus:ring-blue-300
+      focus:outline-none 
+      dark:bg-blue-600 dark:hover:text-blue-300 dark:hover:border-blue-500  dark:focus:ring-blue-800;
+  }
+  .btn-gray {
+    @apply text-white  
+			bg-gray-300
+			border 
+			border-gray-200 
+      hover:bg-gray-400 
+      hover:border-gray-400 
+			dark:bg-gray-400 dark:hover:text-gray-400 dark:hover:border-gray-300  dark:focus:ring-gray-800;
+  }
+  .btn-outlineGray {
+    @apply text-gray-700  
+			bg-white
+			border 
+			border-gray-200 
+      hover:border-gray-400 
+      hover:text-gray-900
+			focus:ring-4 
+			focus:ring-gray-300
+      focus:outline-none 
+			dark:bg-gray-600 dark:hover:text-gray-300 dark:hover:border-gray-500  dark:focus:ring-gray-800;
+  }
+  .btn-purple {
+    @apply text-white  
+      bg-purple-700
+      border 
+      border-purple-700 
+      hover:bg-purple-800 
+      hover:border-purple-800 
+      dark:bg-purple-600 dark:hover:text-purple-300 dark:hover:border-purple-500  dark:focus:ring-purple-800;
+  }
+  .btn-outlinePurple {
+    @apply text-purple-800  
+      bg-white
+      border 
+      border-purple-800 
+      hover:bg-purple-800 
+      hover:border-purple-800 
+      hover:text-white
+      focus:ring-4 
+      focus:ring-purple-300
+      focus:outline-none 
+      dark:bg-purple-600 dark:hover:text-purple-300 dark:hover:border-purple-500  dark:focus:ring-purple-800;
+  }
+  .btn-amber {
+    @apply text-amber-600  
+			bg-amber-200
+			border 
+			border-amber-200 
+      hover:bg-amber-500
+      hover:border-amber-500 
+      hover:text-amber-50
+			dark:bg-amber-600 dark:hover:text-amber-300 dark:hover:border-amber-500;
+  }
+	.btn-outlineAmber {
+    @apply text-amber-800  
+      bg-white
+      border 
+      border-amber-800 
+      hover:bg-amber-800 
+      hover:border-amber-800 
+      hover:text-white
+      focus:ring-4 
+      focus:ring-amber-300
+      focus:outline-none 
+      dark:bg-amber-600 dark:hover:text-amber-300 dark:hover:border-amber-500  dark:focus:ring-amber-800;
+  }
+  .btn-back{
+    @apply bg-blue-200 
+    text-blue-700 
+    hover:bg-blue-300 
+    hover:shadow-sm 
+    hover:transition 
+    hover:duration-200 
+    hover:text-blue-800
+    rounded-md 
+    font-medium text-xs text-center
+    py-3.5 px-4;
+  }
+  .menu-navy {
+    @apply text-gray-700  
+      hover:text-blue-700
+      focus:text-blue-700
+      active:text-blue-700
+			dark:bg-blue-600 dark:hover:text-blue-300 dark:hover:border-blue-500;
+  }
+  .text-title {
+    @apply text-[12px] font-medium text-gray-500;
+  }
+  .text-th{
+    @apply text-[11px] text-zinc-400 mt-[2px];
+  }
+  .text-detail{
+    @apply
+    font-normal text-[13px] text-gray-700;
+  }
+  .headline-blue{
+    @apply mt-4 bg-blue-50 border-l-8 border-blue-500;
+  }
+  .head-blue{
+    @apply me-4 border-l-8 border-blue-500;
+  }
+  .text-link{
+    @apply text-white
+    hover:text-orange-500;
+  }
+}
+.bg-navy{
+  background-color: #143b75;
+}
+div[disabled] {
+  pointer-events: none;
+  opacity: 0.7;
+}
+
+.roundedTop {
+  border-top-left-radius: 0px;
+  border-top-right-radius: 4px;
+}
+
+.roundedTop-md {
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+.file-btn {
+  width: 330px;
+  height: 150px;
+  font-size: 18px;
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  color: #5d4dcc;
+  background-color: #fff;
+  border: 1.5px dashed #5d4dcc;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.file-btn:hover {
+  color: #5d4dcc;
+  background-color: #fff;
+}
+
+.file-btn span {
+  width: 50px;
+  height: 50px;
+  font-size: 30px;
+  color: #5d4dcc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 25px;
+  background-color: #f1efff;
+}
+
+.file-card {
+  width: 300px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: #000;
+  background-color: #fff;
+  border: 1px solid rgba(117, 96, 255, 0.281);
+  border-radius: 6px;
+  padding: 8px 15px;
+}
+
+.file-info {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.file-info h6 {
+  flex: 1;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.progress-bg {
+  width: 100%;
+  height: 5px;
+  background-color: rgba(0, 0, 0, 0.076);
+  border-radius: 8px;
+  margin-top: 6px;
+}
+
+.progress {
+  width: 0%;
+  height: 5px;
+  background-color: #4284ff;
+  border-radius: 8px;
+  transition: width 0.5s ease;
+}
+
+.icon {
+  font-size: 30px;
+  color: #7460ff;
+}
+
+.close-icon {
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.file-info button,
+.check-circle {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  color: #463a99;
+  background-color: #f1efff;
+  border: none;
+  border-radius: 30px;
+}
+
+
+.upload-btn {
+  width: 330px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+  background-color: #7460ff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  margin-top: 15px;
+  cursor: pointer;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.globalLoader {
+  position: fixed;
+  z-index: 9999;
+  top: 50%;
+  left: 50%;
+  background-color: #9281ff;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  opacity: 1;
+  transition: opacity 1.5s ease-out;
+}
+
+.globalLoaderNotTransition {
+  position: fixed;
+  z-index: 9999;
+  top: 50%;
+  left: 50%;
+  background-color: #ffffff;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes fadeOut {
+  from {opacity: 1;}
+  to {opacity: 0;}
+}
+
+.loading-container {
+  animation: fadeOut 1.5s ease-out forwards; /* ระยะเวลาและลักษณะการเคลื่อนไหว */
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 55px;
+  height: 28px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #7460ff;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.label {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 11px;
+  color: white; /* Adjust text color */
+}
+
+.on-label {
+  left: 10px; /* Position when the switch is off */
+}
+
+.off-label {
+  right: 6px; /* Position when the switch is on */
+}
+
+.fixed-div {
+  position: fixed;
+  width: 23.5%;
+  z-index: 1; /* เพื่อให้แน่ใจว่า `div` อยู่ด้านบน */
+}
+
+ol,
+ul,
+menu {
+  list-style: none;
+  margin: 1rem;
+  padding: 0rem 1rem;
+}
+/* li {
+  list-style-type: none;
+} */
+
+.modal-div {
+  z-index: 200;
+}
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.popup-content {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  width: 60%;
+}
+
+.fade-in {
+  opacity: 1;
+  animation: fadeIn 0.5s;
+  visibility: visible;
+}
+
+.fade-out {
+  opacity: 0;
+  animation: fadeOut 0.5s;
+  visibility: hidden;
+}
+
+.popup-repassword {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+  transition: opacity 0.5s;
+  opacity: 0;
+}
+
+.modalContent {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.show {
+  display: block;
+  opacity: 1;
+}
+
+.hide {
+  display: none;
+  opacity: 0;
 }
