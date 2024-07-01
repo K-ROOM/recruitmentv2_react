@@ -7,6 +7,9 @@ const nextConfig = {
         serverActions: true,
     },
     reactStrictMode: true,
+    env: {
+        PORT: 3001
+    }
 };
 
 export default nextConfig;
