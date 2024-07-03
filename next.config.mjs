@@ -5,10 +5,10 @@ const nextConfig = {
     },
     reactStrictMode: true,
     env: {
-        NEXT_PUBLIC_API_KEY: process.env.NEXT_PUBLIC_API_KEY,
-        NEXTAUTH_URL: process.env.NEXTAUTH_URL,
-        NEXTAUTH_SECRET: process.env.NEXTAUTH_SECRET,
-        NEXTEMAIL_URL: process.env.NEXTEMAIL_URL
+        NEXT_PUBLIC_API_KEY: "https://app.nipponexpress-necl.co.th:3000",
+        NEXTAUTH_URL: "https://app.nipponexpress-necl.co.th:3001",
+        NEXTAUTH_SECRET: "rms-access-token",
+        NEXTEMAIL_URL: "http://172.16.58.231:3002/main"
     },
 };
 
