@@ -5,7 +5,6 @@ import { LuPencilLine, LuClipboardSignature } from "react-icons/lu";
 import { IoClipboardOutline } from "react-icons/io5";
 import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
 import Link from "next/link";
-import axios from "axios";
 
 const FormSignup_Body = () => {
 
@@ -50,11 +49,8 @@ const FormSignup_Body = () => {
 
         if (name === 'username') {
             if (value !== '') {
-                // const result = await CheckAccount(value);
-                const headers = { 'Content-Type': 'application/json' }
-                const response = await axios.get(process.env.NEXT_PUBLIC_API_KEY + '/rmslogin/' + value, { headers })
-                response.data
-                if (response.data !== null && response.data !== '') {
+                const result = await CheckAccount(value);
+                if (result !== null && result !== '') {
                     setVisibleUsername(true);
                 } else {
                     setVisibleUsername(false);
