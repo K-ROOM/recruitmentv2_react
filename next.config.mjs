@@ -5,6 +5,7 @@ const nextConfig = {
     },
     experimental: {
         serverActions: true,
+        mutations: true,
     },
     reactStrictMode: true,
 };
