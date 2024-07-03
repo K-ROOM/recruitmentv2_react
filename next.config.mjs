@@ -10,6 +10,7 @@ const nextConfig = {
         mutations: true,
     },
     reactStrictMode: true,
+    distDir: 'build',
 };
 
 export default nextConfig;
