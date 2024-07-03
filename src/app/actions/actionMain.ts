@@ -29,7 +29,7 @@ export async function CreateApplication(positionDesired: any, username: any, fir
 export async function CheckAccount(obj: any) {
     try {
         const headers = { 'Content-Type': 'application/json' }
-        const response = await axios.get(process.env.NEXT_PUBLIC_API_KEY + '/rmslogin/' + obj, { headers })
+        const response = await axios.get('https://app.nipponexpress-necl.co.th:3000/rmslogin/' + obj, { headers })
         console.log(response.data);
         if (response.data != null && response.data != '') {
             return response.data;
