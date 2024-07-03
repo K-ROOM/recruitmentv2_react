@@ -25,11 +25,9 @@ export const authOptions: AuthOptions = {
     ],
     callbacks: {
       async signIn({user, account, profile, credentials}: any) {
-        console.log('kkkkkkkkk');
-        const res = await axios.post('https://10.0.0.7/auth/login', credentials, {
+        const res = await axios.post(process.env.NEXT_PUBLIC_API_KEY + '/auth/login', credentials, {
           headers: { "Content-Type": "application/json" }
         });
-        console.log('aaaaaaaaa');
         const userlogin = res.data;
         user.accessToken = userlogin.accessToken;
         user.refreshToken = userlogin.refreshToken;
