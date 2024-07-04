@@ -91,7 +91,6 @@ const GetData = () => {
         if (!result?.error) {
             window.location.href = '/main';
         } else {
-            console.log('xxxxx: ' + result?.error);
             setVisibleError(true);
             setTimeout(() => {
                 setVisibleError(false);
