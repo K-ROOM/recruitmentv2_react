@@ -101,6 +101,8 @@ const GetData = () => {
         divRefs.current[index].scrollIntoView({ behavior: 'smooth', block: 'start' });
     };
 
+    console.log(process.env.NEXT_PUBLIC_API_KEY);
+
     const { data, error } = useSWR(process.env.NEXT_PUBLIC_API_KEY + '/master_position/active', fetcher);
 
     if (error) return <div>Error fetching data</div>;
@@ -148,7 +150,6 @@ const GetData = () => {
                                 <div className="py-4">
                                     <div className="flex justify-between gap-4">
                                         <p className="text-xl font-bold text-blue-800">{item.positionDesired}</p>
-                                        <p className="text-xs text-gray-500 text-right self-center">{process.env.NEXT_PUBLIC_API_KEY}</p>
                                         <p className="text-xs text-gray-500 text-right self-center">{moment(item.positionActiveDate).fromNow()}</p>
                                     </div>
                                 </div>
