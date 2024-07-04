@@ -113,7 +113,6 @@ const GetData = () => {
                     <img src="/logo-necl.svg" className="block sm:hidden" alt="Loading..." style={{ width: 500, height: 42 }} />
                     <Link href="" as={`/login`} className="btn btn-navy self-end">Log In</Link>
                 </div>
-                <p className="">{process.env.NEXT_PUBLIC_API_KEY}</p>
                 <div className="flex sm:flex-col items-stretch gap-4 relative z-0">
                     <div className="basis-4/12 sm:basis-full">
                         <div className="bg-white p-4 border shadow-sm rounded-lg fixed sm:relative">
@@ -149,6 +148,7 @@ const GetData = () => {
                                 <div className="py-4">
                                     <div className="flex justify-between gap-4">
                                         <p className="text-xl font-bold text-blue-800">{item.positionDesired}</p>
+                                        <p className="text-xs text-gray-500 text-right self-center">{process.env.NEXT_PUBLIC_API_KEY}</p>
                                         <p className="text-xs text-gray-500 text-right self-center">{moment(item.positionActiveDate).fromNow()}</p>
                                     </div>
                                 </div>
