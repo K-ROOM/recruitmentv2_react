@@ -28,6 +28,7 @@ export const authOptions: AuthOptions = {
         const res = await axios.post('https://10.0.0.7:3000/auth/login', credentials, {
           headers: { "Content-Type": "application/json" }
         });
+        console.log('i hereee : ' + res);
         const userlogin = res.data;
         user.accessToken = userlogin.accessToken;
         user.refreshToken = userlogin.refreshToken;
