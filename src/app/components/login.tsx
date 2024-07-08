@@ -88,7 +88,7 @@ const GetData = () => {
             password: credentials.password,
             role: 'USER',
         });
-        console.log('xxxxx : ' + result?.error);
+        console.log('test 10.0.0.7:3000 : ' + result?.error);
         if (!result?.error) {
             window.location.href = '/main';
         } else {
