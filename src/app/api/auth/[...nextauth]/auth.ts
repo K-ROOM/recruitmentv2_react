@@ -25,7 +25,7 @@ export const authOptions: AuthOptions = {
     ],
     callbacks: {
       async signIn({user, account, profile, credentials}: any) {
-        const res = await axios.post(process.env.NEXT_PUBLIC_API_KEY + '/auth/login', credentials, {
+        const res = await axios.post('https://10.0.0.7:3000/auth/login', credentials, {
           headers: { "Content-Type": "application/json" }
         });
         const userlogin = res.data;
