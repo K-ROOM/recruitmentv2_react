@@ -101,7 +101,7 @@ const GetData = () => {
         divRefs.current[index].scrollIntoView({ behavior: 'smooth', block: 'start' });
     };
 
-    const { data, error } = useSWR(process.env.NEXT_PUBLIC_API_KEY + '/master_position/active', fetcher);
+    const { data, error } = useSWR('https://10.0.0.7:3000/master_position/active', fetcher);
 
     if (error) return <div>Error fetching data</div>;
     if (!data) return <Loading />;
