@@ -88,6 +88,7 @@ const GetData = () => {
             password: credentials.password,
             role: 'USER',
         });
+        console.log(result);
         if (!result?.error) {
             window.location.href = '/main';
         } else {
@@ -334,7 +335,7 @@ const GetData = () => {
 
                                 <form onSubmit={handleSubmit}>
                                     <div className="flex flex-col gap-1">
-                                        <label className="text-xs font-normal text-gray-700">Email x</label>
+                                        <label className="text-xs font-normal text-gray-700">Email</label>
                                         <input type="text" id="username" name="username" value={credentials.username} maxLength={50} onChange={(e) => setCredentials({ ...credentials, username: e.target.value })} className="bg-gray-100 border border-gray-300 text-gray-900 text-xs rounded-lg block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white mb-2" />
 
                                         <div className="flex justify-between">
