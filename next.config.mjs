@@ -5,7 +5,7 @@ const nextConfig = {
     },
     experimental: {
         serverActions: {
-            allowedOrigins: ['https://10.0.0.7:3000', 'http://10.0.0.7:3000', 'https://10.0.0.7', 'http://10.0.0.7'],
+            allowedOrigins: ['https://app.nipponexpress-necl.co.th:3000', 'http://app.nipponexpress-necl.co.th:3000', 'https://app.nipponexpress-necl.co.th', 'http://app.nipponexpress-necl.co.th'],
         },
         mutations: true,
     },
