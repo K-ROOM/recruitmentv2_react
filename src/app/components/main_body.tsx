@@ -238,7 +238,15 @@ const MainBody = ({ session }: any) => {
                 </div>
 
                 <div className="flex my-2">
-                  <button type="button" className="btn btn-orange px-4 w-fit sm:w-full" onClick={() => CreateApplicationClient(item.positionDesired, session?.username, session?.firstname, session?.lastname)}>Apply Now</button>
+                  {
+                    item.positionDesired === 'นักศึกษาฝึกงาน' ?
+                      <>
+                      </>
+                      :
+                      <>
+                        <button type="button" className="btn btn-orange px-4 w-fit sm:w-full" onClick={() => CreateApplicationClient(item.positionDesired, session?.username, session?.firstname, session?.lastname)}>Apply Now</button>
+                      </>
+                  }
                 </div>
               </div>
             ))}

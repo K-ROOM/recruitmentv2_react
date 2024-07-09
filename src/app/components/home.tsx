@@ -251,7 +251,15 @@ const GetData = () => {
 
                                 <div className="flex my-2">
                                     {/* <button type="button" className="btn btn-orange px-4 w-fit sm:w-full" onClick={login}>Apply Now</button> */}
-                                    <Link href="" as={`/login`} className="btn btn-orange px-4 w-fit sm:w-full">Apply Now</Link>
+                                    {
+                                        item.positionDesired === 'นักศึกษาฝึกงาน' ?
+                                        <>
+                                        </>
+                                        :
+                                        <>
+                                            <Link href="" as={`/login`} className="btn btn-orange px-4 w-fit sm:w-full">Apply Now</Link>
+                                        </>
+                                    }
                                 </div>
                             </div>
                         ))}
