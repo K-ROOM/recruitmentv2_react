@@ -252,7 +252,7 @@ const GetData = () => {
                                 <div className="flex my-2">
                                     {/* <button type="button" className="btn btn-orange px-4 w-fit sm:w-full" onClick={login}>Apply Now</button> */}
                                     {
-                                        item.positionDesired === 'นักศึกษาฝึกงาน' ?
+                                        item.positionID === 'RMS-POS-00028' ?
                                         <>
                                         </>
                                         :

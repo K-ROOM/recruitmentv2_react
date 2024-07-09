@@ -239,7 +239,7 @@ const MainBody = ({ session }: any) => {
 
                 <div className="flex my-2">
                   {
-                    item.positionDesired === 'นักศึกษาฝึกงาน' ?
+                    item.positionID === 'RMS-POS-00028' ?
                       <>
                       </>
                       :
