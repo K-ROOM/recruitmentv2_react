@@ -18,6 +18,7 @@ export async function CreateApplication(positionDesired: any, username: any, fir
         'lastnameeng': lastname,
         'registrationDate': new Date(),
     }
+
     const response = await axios.post(process.env.NEXT_PUBLIC_API_KEY + '/rms', data, { headers })
     if (response.status === 201) {
         redirect("/main/application_form/" + response.data.recruitmentID);
@@ -29,7 +30,7 @@ export async function CreateApplication(positionDesired: any, username: any, fir
 export async function CheckAccount(obj: any) {
     try {
         const headers = { 'Content-Type': 'application/json' }
-        const response = await axios.get('https://10.0.0.7:3000/rmslogin/' + obj, { headers })
+        const response = await axios.get(process.env.NEXT_PUBLIC_API_KEY + '/rmslogin/' + obj, { headers })
         console.log(response.data);
         if (response.data != null && response.data != '') {
             return response.data;
