@@ -283,7 +283,7 @@ const GetData = () => {
                     <IoIosGlobe className="inline-flex w-5 h-5 text-orange-500 me-4" /><a href="https://www.nipponexpress-necl.co.th/career.html" className="text-link">www.nipponexpress-necl.co.th</a>
                 </p>
                 <p className="text-[13px] text-white">
-                    <IoIosMail className="inline-flex w-5 h-5 text-orange-500 me-4" /><span className="font-semibold">E-mail :</span> <a href="mailto:hr_job@nipponexpress-necl.co.th" className="text-link">hr_admin@nipponexpress-necl.co.th</a>
+                    <IoIosMail className="inline-flex w-5 h-5 text-orange-500 me-4" /><span className="font-semibold">E-mail :</span> <a href="mailto:hr_job@nipponexpress-necl.co.th" className="text-link">hr_job@nipponexpress-necl.co.th</a>
                 </p>
                 <div className="border-t border-t-gray-100 py-3">
                     <p className="text-[11px] text-white text-left sm:text-center">
