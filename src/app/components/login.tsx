@@ -352,8 +352,8 @@ const GetData = () => {
                                 </form>
 
                                 <div className="border-t mt-5">
-                                    <p className="text-[11px] font-normal inline-flex text-gray-700 mt-2">Not registered yet ?</p>
-                                    <Link href="" as={`/signup`} className="text-[11px] font-bold ms-1 text-blue-800 mt-2">Sign Up</Link>
+                                    <p className="text-[12px] font-normal inline-flex text-gray-700 mt-2">Not registered yet ?</p>
+                                    <Link href="" as={`/signup`} className="text-[13px] font-bold ms-1 text-orange-500 mt-2">Sign Up</Link>
                                 </div>
                             </div>
                         </div>
