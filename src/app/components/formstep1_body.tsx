@@ -548,7 +548,7 @@ const Form1_Body = ({ session, header }: any) => {
                     <div className="grid grid-cols-12 gap-4 mt-6">
                         <div className="col-span-2 sm:col-span-full ">
                             <p className="text-title">Date of Birth</p>
-                            <input type="date" id="dateofBirth" name="dateofBirth" value={formData.dateofBirth === null ? '' : formData.dateofBirth} onChange={handleInputChange} className="input-formcontrol" required />
+                            <input type="date" id="dateofBirth" name="dateofBirth" value={formData.dateofBirth === null ? '' : formData.dateofBirth} onChange={handleInputChange} className="input-formcontrol" min="1900-01-01" required />
                             <p className=" text-th">เดือน / วัน / ปี เกิด</p>
                         </div>
 
