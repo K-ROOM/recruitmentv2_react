@@ -286,6 +286,10 @@ const Form1_Body = ({ session, header }: any) => {
         }
     };
 
+
+    const minYearInAD = 1900; // ปี ค.ศ. ที่คุณต้องการกำหนดเป็นขั้นต่ำ
+    const minDateInBuddhistEra = `${minYearInAD + 543}-01-01`; // แปลงเป็นปี พ.ศ.
+
     const headers = {
         Authorization: `Bearer ${access_Token}`
     }
@@ -548,7 +552,7 @@ const Form1_Body = ({ session, header }: any) => {
                     <div className="grid grid-cols-12 gap-4 mt-6">
                         <div className="col-span-2 sm:col-span-full ">
                             <p className="text-title">Date of Birth</p>
-                            <input type="date" id="dateofBirth" name="dateofBirth" value={formData.dateofBirth === null ? '' : formData.dateofBirth} onChange={handleInputChange} className="input-formcontrol" min="1900-01-01" required />
+                            <input type="date" id="dateofBirth" name="dateofBirth" value={formData.dateofBirth === null ? '' : formData.dateofBirth} onChange={handleInputChange} className="input-formcontrol" min={minDateInBuddhistEra} required />
                             <p className=" text-th">เดือน / วัน / ปี เกิด</p>
                         </div>
 
