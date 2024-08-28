@@ -12,6 +12,8 @@ export async function PatchApplicationHeader(obj: any) {
         Authorization: `Bearer ${access_Token}`
     }
 
+    console.log(obj.dateofBirth);
+
     try {
         const response = await axios.patch(process.env.NEXT_PUBLIC_API_KEY + '/rms/' + obj.recruitmentID, obj, { headers })
         return response.data;
