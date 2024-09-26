@@ -610,10 +610,17 @@ const Form2_Body = ({ session, header }: any) => {
                 </div>
 
                 <div className="grid grid-cols-12 mt-6 sm:mt-2 gap-2">
+                    <div className="col-span-3 sm:col-span-full mr-2">
+                        <label className="text-title font-normal text-gray-700">Mobile Number</label>
+                        <input type="text" id="motherMobileno" name="motherMobileno" value={formData.motherMobileno} maxLength={10} onChange={handleInputChange} className="input-formcontrol" />
+                        <p className=" text-th">เบอร์โทรศัพท์มือถือ</p>
+
+                    </div>
+
                     <div className="col-span-4 sm:col-span-full mr-2">
-                        <label className="text-title font-normal text-gray-700">Home Address (Father and Mother)</label>
-                        <input type="text" id="homeAddress" name="homeAddress" value={formData.homeAddress} maxLength={100} onChange={handleInputChange} className="input-formcontrol" />
-                        <p className=" text-th">ที่อยู่พ่อและแม่</p>
+                        <label className="text-title font-normal text-gray-700">Place of Work</label>
+                        <input type="text" id="motherPlaceofWork" name="motherPlaceofWork" value={formData.motherPlaceofWork} maxLength={50} onChange={handleInputChange} className="input-formcontrol" />
+                        <p className=" text-th">สถานที่ทำงาน</p>
                     </div>
                 </div>
 

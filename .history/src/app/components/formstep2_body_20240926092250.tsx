@@ -43,7 +43,7 @@ const Form2_Body = ({ session, header }: any) => {
         motherOccupation: header.motherOccupation,
         motherPlaceofWork: header.motherPlaceofWork,
         motherMobileno: header.motherMobileno,
-        homeAddress: header.homeAddress,
+        HomeAddress: header.
         sibling: header.sibling ? header.sibling : null,
         siblingNo: header.siblingNo,
         formStep2: header.formStep2,
@@ -606,14 +606,6 @@ const Form2_Body = ({ session, header }: any) => {
                         <label className="text-title font-normal text-gray-700">Place of Work</label>
                         <input type="text" id="motherPlaceofWork" name="motherPlaceofWork" value={formData.motherPlaceofWork} maxLength={50} onChange={handleInputChange} className="input-formcontrol" />
                         <p className=" text-th">สถานที่ทำงาน</p>
-                    </div>
-                </div>
-
-                <div className="grid grid-cols-12 mt-6 sm:mt-2 gap-2">
-                    <div className="col-span-4 sm:col-span-full mr-2">
-                        <label className="text-title font-normal text-gray-700">Home Address (Father and Mother)</label>
-                        <input type="text" id="homeAddress" name="homeAddress" value={formData.homeAddress} maxLength={100} onChange={handleInputChange} className="input-formcontrol" />
-                        <p className=" text-th">ที่อยู่พ่อและแม่</p>
                     </div>
                 </div>
 

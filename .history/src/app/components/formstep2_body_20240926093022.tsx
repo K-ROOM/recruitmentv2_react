@@ -613,7 +613,7 @@ const Form2_Body = ({ session, header }: any) => {
                     <div className="col-span-4 sm:col-span-full mr-2">
                         <label className="text-title font-normal text-gray-700">Home Address (Father and Mother)</label>
                         <input type="text" id="homeAddress" name="homeAddress" value={formData.homeAddress} maxLength={100} onChange={handleInputChange} className="input-formcontrol" />
-                        <p className=" text-th">ที่อยู่พ่อและแม่</p>
+                        <p className=" text-th">สถานที่ทำงาน</p>
                     </div>
                 </div>
 
