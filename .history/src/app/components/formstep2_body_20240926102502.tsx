@@ -7,7 +7,6 @@ import { GrCertificate, GrFormPreviousLink } from "react-icons/gr";
 import { IoLockClosed } from "react-icons/io5";
 import { GrFormNextLink } from "react-icons/gr";
 import { FaCirclePlus, FaCircleXmark } from "react-icons/fa6";
-import Image from "next/image";
 
 const Form2_Body = ({ session, header }: any) => {
 

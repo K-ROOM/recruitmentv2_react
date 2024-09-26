@@ -5,7 +5,6 @@ import { LuPencilLine, LuClipboardSignature } from "react-icons/lu";
 import { IoClipboardOutline } from "react-icons/io5";
 import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
 import Link from "next/link";
-import Image from "next/image";
 
 const FormSignup_Body = () => {
 

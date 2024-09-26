@@ -541,7 +541,7 @@ const Form6_Body1 = ({ session, header }: any) => {
                                     <>
                                         <div className="flex self-center px-5 pt-5">
                                             <h3 className="text-xl font-semibold">
-                                                <Image src="/check.gif" alt="Loading..." style={{ width: 150, height: 150 }} />
+                                                <img src="/check.gif" alt="Loading..." style={{ width: 150, height: 150 }} />
                                             </h3>
                                         </div>
                                         <div className="relative px-8 pt-4 pb-8 flex-auto text-center">
@@ -556,7 +556,7 @@ const Form6_Body1 = ({ session, header }: any) => {
                                     <>
                                         <div className="flex self-center px-5 pt-9 pb-6   rounded-t">
                                             <h3 className="text-xl font-semibold">
-                                                <Image src="/error.gif" alt="Loading..." style={{ width: 100, height: 100 }} />
+                                                <img src="/error.gif" alt="Loading..." style={{ width: 100, height: 100 }} />
                                             </h3>
                                         </div>
                                         <div className="relative px-8 pt-4 pb-8 flex-auto text-center">

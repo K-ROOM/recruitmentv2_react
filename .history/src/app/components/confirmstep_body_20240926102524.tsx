@@ -4,7 +4,6 @@ import { PatchApplicationConfirm, PatchApplicationHeader } from "../actions/acti
 import { GrFormNextLink } from "react-icons/gr";
 import { IoIosSend } from "react-icons/io";
 import { SiMinutemailer } from "react-icons/si";
-import Image from "next/image";
 
 const Confirm_Body = ({ session, header }: any) => {
 

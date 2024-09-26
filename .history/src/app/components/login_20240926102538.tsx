@@ -16,7 +16,6 @@ import React from 'react';
 import { IoMdArrowDropright } from "react-icons/io";
 import { FaLocationArrow } from "react-icons/fa";
 import { FaCopyright } from "react-icons/fa6";
-import Image from "next/image";
 
 const fetcher = async (url: any) => {
     const response = await fetch(url);

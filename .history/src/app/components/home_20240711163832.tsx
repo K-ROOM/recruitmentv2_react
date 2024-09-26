@@ -110,7 +110,7 @@ const GetData = () => {
         <>
             <div className="container px-8">
                 <div className="flex justify-between pb-4 pt-1 mb-2 sticky top-0 bg-stone-100 z-10">
-                    <Image src="/logo-necl.svg" className="block sm:hidden" alt="Loading..." style={{ width: 500, height: 42 }} />
+                    <img src="/logo-necl.svg" className="block sm:hidden" alt="Loading..." style={{ width: 500, height: 42 }} />
                     <Link href="" as={`/login`} className="btn btn-navy self-end">Log In</Link>
                 </div>
                 <div className="flex sm:flex-col items-stretch gap-4 relative z-0">

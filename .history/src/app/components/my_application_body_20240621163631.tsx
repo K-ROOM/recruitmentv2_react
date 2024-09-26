@@ -246,7 +246,7 @@ const MyApplicationBody = ({ session }: any) => {
                                     {
                                         checkDeleteApplicationStatus ?
                                             <>
-                                                <Image src="/check.gif" className="mx-auto" alt="Loading..." style={{ width: 150, height: 150 }} />
+                                                <img src="/check.gif" className="mx-auto" alt="Loading..." style={{ width: 150, height: 150 }} />
                                             </>
                                             :
                                             <>
