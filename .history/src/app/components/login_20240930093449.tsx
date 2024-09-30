@@ -312,7 +312,7 @@ const GetData = () => {
         <>
             <div className="flex flex-col h-screen">
                 <div className="flex justify-between p-2 sticky top-0 bg-stone-100 z-10 px-8">
-                    <Image src="/logo-necl.svg" className="block sm:hidden" alt="Loading..." width={500} height={42} />
+                    <Image src="/logo-necl.svg" className="block sm:hidden" alt="Loading..."  width={500} />
                     <Link href="" as={`/`} className="btn btn-navy self-end">Career</Link>
                 </div>
 
@@ -413,7 +413,7 @@ const GetData = () => {
                                                                                 :
                                                                                 <>
                                                                                     <div className="px-[49px] mb-5">
-                                                                                        <Image src="/error.gif" alt="Loading..." width={100} height={100} />
+                                                                                        <Image src="/error.gif" alt="Loading..." style={{ width: 100, height: 100, }} />
                                                                                     </div>
                                                                                     <p className="text-md font-bold text-red-600">
                                                                                         เปลี่ยนรหัสผ่านไม่สำเร็จ โปรดลองอีกครั้ง!

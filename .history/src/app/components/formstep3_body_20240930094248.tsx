@@ -223,14 +223,14 @@ const Form3_Body = ({ session, header }: any) => {
                                         <>
                                             <div className="col-span-2 mr-2">
                                                 <p className="text-xs font-medium inline-flex text-gray-700"></p>
-                                                <FaCirclePlus className="ml-2 inline-flex text-gray-400 bg-white w-[35px] h-[35px] hover:text-gray-500 cursor-no-drop ml-2" />
+                                                <FaCirclePlus className="ml-auto inline-flex text-gray-400 bg-white w-[35px] h-[35px] hover:text-gray-500 cursor-no-drop ml-2" />
                                             </div>
                                         </>
                                         :
                                         <>
                                             <div className="col-span-2 mr-2">
                                                 <p className="text-xs font-medium inline-flex text-gray-700"></p>
-                                                <FaCirclePlus className="ml-2 inline-flex text-green-500 bg-white w-[35px] h-[35px] hover:text-green-700 cursor-pointer" onClick={addEducation} />
+                                                <FaCirclePlus className="ml-auto inline-flex text-green-500 bg-white w-[35px] h-[35px] hover:text-green-700 cursor-pointer ml-10" onClick={addEducation} />
                                             </div>
                                         </>
                                 }

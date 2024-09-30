@@ -413,7 +413,7 @@ const GetData = () => {
                                                                                 :
                                                                                 <>
                                                                                     <div className="px-[49px] mb-5">
-                                                                                        <Image src="/error.gif" alt="Loading..." width={100} height={100} />
+                                                                                        <Image src="/error.gif" alt="Loading..." style={{ width: 100, height: 100, }} />
                                                                                     </div>
                                                                                     <p className="text-md font-bold text-red-600">
                                                                                         เปลี่ยนรหัสผ่านไม่สำเร็จ โปรดลองอีกครั้ง!
