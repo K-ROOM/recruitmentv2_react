@@ -496,7 +496,7 @@ const Form3_Body = ({ session, header }: any) => {
 
                                                 <div className="col-span-2 mr-2">
                                                     <label className="text-title mb-1">Business Type</label>
-                                                    <input type="text" id="internshipTypeofBusiness" name="internshipTypeofBusiness" value={e.internshipTypeofBusiness} maxLength={100} onChange={(e) => handleChangeInputInternship(e, index)} className="input-formcontrol" required />
+                                                    <input type="text" id="internshipTypeofBusiness" name="internshipTypeofBusiness" value={e.internshipTypeofBusiness} maxLength={50} onChange={(e) => handleChangeInputInternship(e, index)} className="input-formcontrol" required />
                                                     <p className=" text-th">ประเภทของธุรกิจ</p>
                                                 </div>
 
